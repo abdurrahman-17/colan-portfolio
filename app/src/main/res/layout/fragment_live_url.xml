@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="liveUrlVM"
+            type="com.example.colanportfolio.ui.liveurl.LiveUrlViewmodel" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/sky_blue"
+        tools:context=".ui.liveurl.LiveUrlFragment"
+        tools:targetApi="lollipop">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_bg18">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/liveUrl_cv"
+                    android:backgroundTint="@color/white"
+                    android:layout_margin="@dimen/_15sdp"
+                    app:cardCornerRadius="@dimen/_8sdp"
+                    app:cardElevation="@dimen/_4sdp"
+                    android:paddingBottom="@dimen/_10sdp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/title_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_12sdp"
+                            android:fontFamily="sans-serif-condensed-medium"
+                            android:text="@{liveUrlVM.name}"
+                            android:textColor="@color/blue"
+                            android:textSize="@dimen/_14ssp"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            app:layout_constraintBottom_toTopOf="@id/website_tv"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/website_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_12sdp"
+                            android:layout_margin="@dimen/_10sdp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="@string/website"
+                            android:textSize="@dimen/_12ssp"
+                            android:textColor="@color/blue"
+                            app:layout_constraintBottom_toTopOf="@id/webapp_tv"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/title_tv" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/website_link_tv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@{liveUrlVM.webite_link}"
+                            android:textColor="@color/blue_btn"
+                            android:fontFamily="sans-serif-condensed"
+                            android:textSize="@dimen/_12ssp"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:paddingEnd="@dimen/_10sdp"
+                            app:layout_constraintBottom_toBottomOf="@+id/website_tv"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/website_tv"
+                            app:layout_constraintTop_toTopOf="@+id/website_tv" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/webapp_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_12sdp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="@string/web_app"
+                            android:textSize="@dimen/_12ssp"
+                            android:layout_margin="@dimen/_10sdp"
+                            android:textColor="@color/blue"
+                            app:layout_constraintBottom_toTopOf="@id/mobile_app_tv"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/website_tv" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/web_app_link_tv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:paddingLeft="@dimen/_10sdp"
+                            android:paddingEnd="@dimen/_10sdp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="@{liveUrlVM.webApp_link}"
+                            android:textColor="@color/blue_btn"
+                            android:textSize="@dimen/_12ssp"
+                            app:layout_constraintBottom_toBottomOf="@+id/webapp_tv"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/webapp_tv"
+                            app:layout_constraintTop_toTopOf="@+id/webapp_tv" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/mobile_app_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_12sdp"
+                            android:layout_marginBottom="@dimen/_3sdp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="@string/mobile_app"
+                            android:textSize="@dimen/_12ssp"
+                            android:textColor="@color/blue"
+                            app:layout_constraintBottom_toTopOf="@id/android_ib"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/webapp_tv" />
+
+                        <ImageButton
+                            android:id="@+id/android_ib"
+                            android:layout_width="@dimen/_90sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:background="@drawable/ic_play_store"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:layout_marginBottom="@dimen/_15sdp"
+                            app:layout_constraintEnd_toStartOf="@+id/ios_ib"
+                            app:layout_constraintHorizontal_chainStyle="spread"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/mobile_app_tv" />
+
+                        <ImageButton
+                            android:id="@+id/ios_ib"
+                            android:layout_width="@dimen/_90sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:background="@drawable/ic_app_store"
+                            app:layout_constraintBottom_toBottomOf="@+id/android_ib"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/android_ib"
+                            app:layout_constraintTop_toTopOf="@+id/android_ib" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </FrameLayout>
+
+</layout>

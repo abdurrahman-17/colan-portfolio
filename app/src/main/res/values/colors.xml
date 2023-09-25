@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="blue">#0c5991</color>
+
+    <color name="app_background_color">#000103</color>
+    <color name="color_yellow">#FCBA13</color>
+    <color name="edit_textColor">#191B1D</color>
+    <color name="pan_textColor">#A5A5A5</color>
+    <color name="search_bg_color">#282A2D</color>
+    <color name="red_bg">#CD1719</color>
+    <color name="text_homeEta">#888888</color>
+    <color name="later_btn">#020305</color>
+    <color name="bottom_color">#313132</color>
+    <color name="down_icon_tint_color">#808080</color>
+    <color name="category_search">#EBEBEB</color>
+    <color name="category_search_hint">#616262</color>
+    <color name="line_color">#E0EAEA</color>
+    <color name="quantity_color">#848484</color>
+    <color name="history_color">#A6A6A6</color>
+    <color name="forgot_color">#E8D4A2</color>
+    <color name="compatible_color">#27AE60</color>
+    <color name="visit_color">#E67E22</color>
+    <color name="text_gray">#D2D2D2</color>
+    <color name="button_green">#27AE60</color>
+    <color name="blue_btn">#1185E0</color>
+    <color name="gray_text_view">#B1B1B1</color>
+    <color name="half_white">#80FFFFFF</color>
+    <color name="reset_color">#B1B2B2</color>
+    <color name="check_color">#656667</color>
+    <color name="shadow_color">#BA8707</color>
+    <color name="initiate_color">#7F7E81</color>
+    <color name="sky_blue">#E8F1FF</color>
+</resources>
